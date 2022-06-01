@@ -17,7 +17,30 @@
             width: 100%;
             display: grid;
             place-items: center;
+            counter-reset: game;
         }
+
+          
+        input:checked{
+            counter-increment: game;
+        }
+
+        .title{
+            display: flex;
+            justify-content: center;
+            color: #996b07;
+        }
+
+        .total-count{
+            display: flex;
+            justify-content: center;
+            color: #996b07;
+        }
+
+        .total-count::after{
+            content: counter(game);
+        }
+
 
         .phone{
             width: 320px;
@@ -34,11 +57,36 @@
             z-index: 1;
             width: 80px;
             height: 450px;
-            background-color: white;
             bottom: 0;
             right: 60px;
-            -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77); 
-            box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77);
+
+            animation-name: layer;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes layer {
+            0%{
+                transform: translateY(0);
+            }
+
+            25%{
+                transform: translateY(10px);
+            }
+
+            90%{
+                transform: translateY(-10px);
+            }
+        }
+
+        .layer-1 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px;
         }
 
         .layer-2{
@@ -46,12 +94,42 @@
             z-index: 2;
             width: 80px;
             height: 450px;
-            background-color: white;
             bottom: 0;
             left: 60px;
-            -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77); 
-            box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77);
+
+            animation-name: layer2;
+            animation-duration: 1s;
+            animation-timing-function: ease-in;
+            animation-iteration-count: infinite;
         }
+
+        @keyframes layer2 {
+
+
+            0%{
+                transform: translateY(0);
+            }
+
+            40%{
+                transform: translateY(40px);
+            }
+
+            90%{
+                transform: translateY(20px);
+            }
+           
+        }
+
+        .layer-2 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px;
+        }
+
+
 
         .layer-3{
             position: absolute;
@@ -78,11 +156,38 @@
             z-index: 4;
             width: 80px;
             height: 300px;
-            background-color: white;
             bottom: 0;
             left: 30px;
-            -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77); 
-            box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77);
+
+            animation-name: layer4;
+            animation-duration: 1.5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes layer4{
+
+             0%{
+                transform: translateY(0);
+            }
+
+            50%{
+                transform: translateY(20px);
+            }
+
+            90%{
+                transform: translateY(-20px);
+            }
+            
+        }
+
+        .layer-4 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px;
         }
 
         .layer-5{
@@ -95,9 +200,9 @@
             -webkit-box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77); 
             box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77);
 
-            background-color: #d68d05;
+            background-color: #b97800;
             opacity: 1;
-            background-image:  linear-gradient(135deg, #077d0a 25%, transparent 25%), linear-gradient(225deg, #077d0a 25%, transparent 25%), linear-gradient(45deg, #077d0a 25%, transparent 25%), linear-gradient(315deg, #077d0a 25%, #d68d05 25%);
+            background-image:  linear-gradient(135deg, #077d0a 25%, transparent 25%), linear-gradient(225deg, #077d0a 25%, transparent 25%), linear-gradient(45deg, #077d0a 25%, transparent 25%), linear-gradient(315deg, #077d0a 25%, #b97800 25%);
             background-position:  40px 0, 40px 0, 0 0, 0 0;
             background-size: 80px 80px;
             background-repeat: repeat;
@@ -108,11 +213,22 @@
             z-index: 6;
             width: 80px;
             height: 200px;
-            background-color: white;
             bottom: 0;
             right: 30px;
-            -webkit-box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77); 
-            box-shadow: 0px 0px 10px -5px rgba(0,0,0,0.77);
+
+            animation-name: layer4;
+            animation-duration: .5s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+
+        .layer-6 input[type=checkbox]{
+            position: absolute;
+            appearance: none;
+            cursor: pointer;
+            z-index: 1;
+            width: 100%;
+            height: 80px;
         }
 
         .layer-7{
@@ -125,9 +241,9 @@
             -webkit-box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77); 
             box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77);
 
-            background-color: #f3a30e;
+            background-color: #b97800;
             opacity: 1;
-            background-image:  linear-gradient(135deg, #077d0a 25%, transparent 25%), linear-gradient(225deg, #077d0a 25%, transparent 25%), linear-gradient(45deg, #077d0a 25%, transparent 25%), linear-gradient(315deg, #077d0a 25%, #e99a07 25%);
+            background-image:  linear-gradient(135deg, #077d0a 25%, transparent 25%), linear-gradient(225deg, #077d0a 25%, transparent 25%), linear-gradient(45deg, #077d0a 25%, transparent 25%), linear-gradient(315deg, #077d0a 25%, #b97800 25%);
             background-position:  40px 0, 40px 0, 0 0, 0 0;
             background-size: 80px 80px;
             background-repeat: repeat;
@@ -143,7 +259,7 @@
             -webkit-box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77); 
             box-shadow: 0px 0px 21px -5px rgba(0,0,0,0.77);
 
-            background-color: #936208;
+            background-color: green;
             
         }
 
@@ -227,7 +343,33 @@
             height: 4px;
             position: absolute;
             top: 15px;
+
+            /* PROPIEDADES Y VALORES DE ANIMACION */
+            animation-name: blink;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
         }
+
+        /* ANIMACIÓN */
+        @keyframes blink{
+            
+            0%{
+                height: 4px;
+            }
+
+            5%{
+                transform: translate(0px, 2px);
+                height: 1px;
+            }
+
+            /* 10% de los 2 segundos de tiempo de animación */
+            10%{
+                transform: translate(0px, 2px);
+                height: 4px;
+            }
+        }
+
+
 
         .head__eye--left{
             left: 30px;
@@ -239,10 +381,15 @@
     </style>
 </head>
 <body>
+
+
+    
+
     <div class="phone">
 
         <!-- BUNNY 1 -->
         <div class="layer-1">
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
 
@@ -257,6 +404,7 @@
 
         <!-- BUNNY 2 -->
         <div class="layer-2">
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
 
@@ -274,6 +422,7 @@
 
         <!-- BUNNY 3 -->
         <div class="layer-4">
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
 
@@ -291,6 +440,7 @@
 
         <!-- BUNNY 3 -->
         <div class="layer-6">
+            <input type="checkbox">
             <div class="left-ear--outer"></div>
             <div class="left-ear--inner"></div>
 
@@ -314,6 +464,13 @@
 
         <!-- TREE -->
         <div class="layer-10"></div>
+
+        <h1 class="title">RABITO GAME</h1>
+
+        <h3 class="total-count"> Score: </h3>
+
+        
+
     </div>
 </body>
 </html>
